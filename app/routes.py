@@ -1,6 +1,5 @@
 from flask import render_template,redirect,url_for, request
 from app import app
-from flask_mysqldb import MySQL
 import conexion as db
 from datetime import datetime
 from datetime import date
