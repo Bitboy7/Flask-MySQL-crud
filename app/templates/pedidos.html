@@ -100,23 +100,18 @@
                                     placeholder="Apellido" required>
                             </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="mensaje" class="form-label">Platillo:</label>
-                            <input class="form-control" list="platillos" id="mensaje" name="pedido"
-                                placeholder="¿Qué vas a comer hoy?">
-                            <datalist id="platillos">
-                                <option value="Enchiladas verdes (4 pz)">
-                                <option value="Chilaquiles verdes">
-                                <option value="Torta de pollo">
-                                <option value="Torta de salchicha">
-                                <option value="Quesadillas (3 pz)">
-                                <option value="Tacos de bistec (4 pz)">
-                                <option value="Tacos de barbacoa (4 pz)">
-                            </datalist>
-                        </div>
 
-                        <div class="mb-3">
-                            <label for="mensaje" class="form-label">Notas</label>
+                        <label class="my-1 mr-2" for="latillo_id">Platillo</label>
+                        <select class="form-select custom-select my-1 mr-sm-2" id="platillo_id" name="platillo_id"
+                            aria-placeholder="Que vas a comer hoy?">
+                            <option value="1">Chilaquiles verdes</option>
+                            <option value="2">Chilaquiles verdes con pollo</option>
+                            <option value="3">Tacos de barbacoa</option>
+                            <option value="4">Picaditas</option>
+                        </select>
+
+                        <div class="mb-2">
+                            <label for="notas" class="form-label">Notas</label>
                             <input class="form-control" list="notes" id="notas" name="notas"
                                 placeholder="Deja una nota, ejemplo: sin cebolla">
                             <datalist id="notes">
@@ -131,6 +126,13 @@
                             <textarea class="form-control" id="sugerencia" name="sugerencia"
                                 placeholder="Escribe aquí tu sugerencia de platillo"></textarea>
                         </div>
+
+                        <div class="mb-3">
+                            <label for="cantidad" class="form-check">Cantidad</label>
+                            <input type="number" class="form-control" id="cantidad" name="cantidad" placeholder="1"
+                                required>
+                        </div>
+
                         <div class="container-xl">
                             <button type="submit" class="btn btn-success">Confirmar</button>
 
@@ -141,6 +143,7 @@
                         </div>
                         <input type="hidden" class="form-control" id="fecha_hora" name="fecha_hora"
                             value="{{ current_date }}">
+
                     </form>
                 </div>
             </div>

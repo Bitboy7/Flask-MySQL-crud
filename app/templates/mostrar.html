@@ -37,10 +37,12 @@
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Cliente</th>
-                            <th scope="col">Pedido</th>
                             <th scope="col">Nota</th>
                             <th scope="col">Sugerencia</th>
                             <th scope="col">Hora</th>
+                            <th scope="col">cantidad</th>
+                            <th scope="col">total</th>
+                            <th scope="col">Nombre platillo</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -48,10 +50,12 @@
                         <tr>
                             <td>{{d.IdPedido}}</td>
                             <td>{{d.Nombre}}</td>
-                            <td>{{d.Pedido}}</td>
                             <td>{{d.Notas}}</td>
                             <td>{{d.Sugerencia}}</td>
                             <td>{{d.Hora}}</td>
+                            <td>{{d.cantidad}}</td>
+                            <td>{{d.total}}</td>
+                            <td>{{d.Nombre}}</td>
                             <td>
                                 <td> <a href="{{ url_for('eliminar', IdPedido=d.IdPedido) }}" class="btn btn-danger btn-sm">
                                     Eliminar </a></td>

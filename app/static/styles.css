@@ -444,7 +444,8 @@ html {
 }
 
 .container-img {
-	position: relative;
+	display: inline;
+	top: 0;
 }
 
 .container-img img {
@@ -452,11 +453,12 @@ html {
 }
 
 .container-img .discount {
-	position: absolute;
+	top: 0;
 	left: 0;
 	background-color: var(--primary-color);
 	color: #fff;
 	padding: 2px 1.2rem;
+	margin: auto;
 	border-radius: 1rem;
 	font-size: 1.2rem;
 }
